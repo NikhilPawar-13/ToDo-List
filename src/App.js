@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import ToDoList from './ToDoList'
+import ChildB from './ChildB'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+//Main App component
+class App extends React.Component {
+
+	constructor(props){
+		super(props);
+		this.state = {
+			totalValue : 0
+		}
+	}
+
+  render(){ 
+      return (
+      	 <div className="App">
+          <h1><span className = "styling">TODO</span>List</h1> 
+
+          <ToDoList />
+          
+         
+        </div>
+
+      )
+	}
 }
 
 export default App;
